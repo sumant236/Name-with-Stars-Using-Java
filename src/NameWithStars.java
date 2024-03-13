@@ -37,7 +37,16 @@ public class NameWithStars {
 
             // A Pattern
             for(int j=0; j<n; j++){
-                if((i==0 && j!=0 && j!=n-1) || i==(n-1)/2 || (j==0 && i!=0) || j==n-1 && i!=0){
+                if(i+j==n-1 || (i==(n-1)/2 && j>=((3*n)/4)-1)){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("");
+            for(int j=0; j<n; j++){
+                if(i==j || (i==(n-1)/2 && j<=(n-1)/2)){
                     System.out.print("*");
                 }
                 else{
